@@ -15,9 +15,14 @@ public class Despawner : MonoBehaviour {
 	
 	}
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        print("Despawner Entereds: " + other.tag);
+    }
+
     void OnTriggerExit2D(Collider2D other)
     {
-        print("Despawner hit: " + other.tag);
+        print("Despawner Exited: " + other.tag);
         Destroy(other.gameObject);
     }
 }
