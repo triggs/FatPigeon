@@ -5,19 +5,35 @@ public class PlayerController : MonoBehaviour
 {
 
 	private Rigidbody2D body;
+	public bool isJumping;
+	private Animator animator;
 	// Use this for initialization
 	void Start ()
 	{
 		this.body = GetComponent<Rigidbody2D> ();
+		this.animator = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
+		
+
+		if (this.isJumping) {//we were jumping
+			bool tempIsJumping = this.checkIfJumping ();//are we still jumping?
+			if (!tempIsJumping) {//if we're not still jumping
+				this.isJumping = false;
+				animator.ResetTrigger("isJumping");
+			}
+		}
+			
 		if (Input.GetKeyDown ("w")) {
 			print ("w was pressed");
-			if (!isJumping ()) {
-				transform.Translate (Vector2.up * 2.75f);
+			if (!this.isJumping) {
+//				transform.Translate (Vector2.up * 2.75f);
+				this.body.AddForce (Vector2.up * 275f);
+				this.isJumping = true;
+				animator.SetTrigger ("isJumping");
 			} else {
 				print ("velocity was " + this.body.velocity.y);
 			}
@@ -30,7 +46,7 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
-	public bool isJumping ()
+	public bool checkIfJumping ()
 	{
 
 //		RaycastHit hit;
