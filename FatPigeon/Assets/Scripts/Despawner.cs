@@ -23,6 +23,6 @@ public class Despawner : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("Despawner: " + other.tag);
+        //print("Despawner: " + other.tag);
     }
 }

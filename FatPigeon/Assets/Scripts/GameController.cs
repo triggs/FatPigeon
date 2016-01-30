@@ -120,6 +120,11 @@ public class GameController : MonoBehaviour
 
     }
 
+    public void AddScore(int value)
+    {
+        scoreController.ChangeScore(value);
+    }
+
     /// <summary>
     /// Return a time value for the Pass/Fail rank of the action performed/not performed
     /// </summary>
