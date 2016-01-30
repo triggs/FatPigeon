@@ -24,26 +24,9 @@ public class ScrollingBackground : MonoBehaviour
     // Update is called once per frame
     void Update ()
 	{
-		if (isBackground) {
-			print ("This is a background. "+ gameController.backgroundMoveSpeed );
-			// Create a Vector2 offset & attach to the renderer to scroll the background.
-			//Vector2 offset = new Vector2 (Time.time * gameController.backgroundMoveSpeed, 0);
-			//GetComponent<Renderer> ().material.mainTextureOffset = offset;
-		}
-
-		/*
-		if (isMiddleground) {
-			// Create a Vector2 offset & attach to the renderer to scroll the background.
-			Vector2 offset = new Vector2 (Time.time * gameController.middlegroundMoveSpeed, 0);
-			GetComponent<Renderer> ().material.mainTextureOffset = offset;
-		}
-
-		if (isForeground) {
-			// Create a Vector2 offset & attach to the renderer to scroll the background.
-			Vector2 offset = new Vector2 (Time.time * gameController.foregroundMoveSpeed, 0);
-			GetComponent<Renderer> ().material.mainTextureOffset = offset;
-		}
-		*/
+        // Create a Vector2 offset & attach to the renderer to scroll the background.
+        Vector2 offset = new Vector2 (Time.time * gameController.obstacleMoveSpeed, 0);
+		GetComponent<Renderer> ().material.mainTextureOffset = offset;
 	}
 }
 
