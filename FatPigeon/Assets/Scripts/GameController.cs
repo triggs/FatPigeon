@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour
     {
         rightSpawner = GameObject.FindGameObjectWithTag("RightSpawner").GetComponent<Spawner>();
         leftSpawner = GameObject.FindGameObjectWithTag("LeftSpawner").GetComponent<Spawner>();
-        obstacleSpawnRate = 2.0f;
+        obstacleSpawnRate = 0.3f;
         nextObstacleSpawnTime = 3.0f;
         scoreController = new ScoreController();
         scoreController.ShowScore();

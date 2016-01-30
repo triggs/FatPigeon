@@ -37,12 +37,12 @@ public class PlayerColliderController : MonoBehaviour {
         ////Destroy(other.gameObject);
         if (other.tag == "Tree")
         {
-            //print("Tree collides with pigeon.");
+            print("Tree collides with pigeon.");
             sirPigeon.SendMessage("SetCollideWithTree", true);
         }
         else if (other.tag == "Cat")
         {
-            //print("Cat collides with pigeon.");
+            print("Cat collides with pigeon.");
             sirPigeon.SendMessage("SetCollideWithCat", true);
         }
         else if (other.tag == "Car")
@@ -52,7 +52,7 @@ public class PlayerColliderController : MonoBehaviour {
         }
         else if (other.tag == "Crack")
         {
-            //print("Crack collides with pigeon.");
+            print("Crack collides with pigeon.");
             sirPigeon.SendMessage("SetCollideWithCrack", true);
         }
         else if (other.tag == "Tree")
