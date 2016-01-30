@@ -48,14 +48,14 @@ public class PlayerColliderController : MonoBehaviour {
         else if (other.tag == "Car")
         {
             print("Car collides with pigeon.");
-            if (other.tag == "ThisWillNeverMatch")
+            if (other.tag == "RightCar")
             {
-                sirPigeon.SendMessage("SetCollideWithLeftCar", true);
+                sirPigeon.SendMessage("SetCollideWithRightCar", true);
             }
             else
             {
                 print("RightCarCollide");
-                sirPigeon.SendMessage("SetCollideWithRightCar", true);
+                sirPigeon.SendMessage("SetCollideWithLeftCar", true);
             }
         }
         else if (other.tag == "Crack")
