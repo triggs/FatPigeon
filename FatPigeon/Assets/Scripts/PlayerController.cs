@@ -20,8 +20,6 @@ public class PlayerController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		
-
 		if (this.isJumping) {//we were jumping
 			bool tempIsJumping = this.checkIfJumping ();//are we still jumping?
 			if (!tempIsJumping) {//if we're not still jumping
@@ -29,7 +27,6 @@ public class PlayerController : MonoBehaviour
 				this.animator.ResetTrigger("isJumping");
 			}
 		}
-			
 		if (Input.GetKeyDown ("w")) {
 			print ("w was pressed");
 			if (this.Grounded) {
@@ -81,8 +78,6 @@ public class PlayerController : MonoBehaviour
 		return retVal;
 	
 	}
-
-
 
 	void OnCollisionStay2D(Collision2D collider)
 	{
