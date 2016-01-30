@@ -2,12 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System;
-/**
-* Derek Browne 05391903
-* 
-* Overall Game Controller
-* 
-* */
+
 public class GameController : MonoBehaviour
 {
 
@@ -17,8 +12,10 @@ public class GameController : MonoBehaviour
     public Spawner leftSpawner;
     public float nextObstacleSpawnTime;
     public int liveCount = 3; // Misses or Bads Lose player 1 Life
-    public float totalScore;
+    public bool gameOver = false;
+    private float gameOverTimeout = 10.0f;
     public float gameTimer = 30.0f;
+    private ScoreController scoreController;
 
     public enum PassFailTime
     {
@@ -34,25 +31,15 @@ public class GameController : MonoBehaviour
         Tree,
         Crack
     }
-
-    public int bugCount;
-    public GUIText scoreText;
-    public GUIText endScoreText;
-    public GUIText gameOverText;
-
-    private bool gameOver;
-    private float gameOverTimeout = 10.0f;
-
-    private float difficultyChangeTime;
-    private float currentDifficulty;
-
-    public AudioClip nyom;
+    
     void Start()
     {
         rightSpawner = GameObject.FindGameObjectWithTag("RightSpawner").GetComponent<Spawner>();
         leftSpawner = GameObject.FindGameObjectWithTag("LeftSpawner").GetComponent<Spawner>();
         obstacleSpawnRate = 2.0f;
         nextObstacleSpawnTime = 3.0f;
+        scoreController = new ScoreController();
+        scoreController.ShowScore();
     }
 
     /// <summary>
@@ -69,6 +56,21 @@ public class GameController : MonoBehaviour
             }
         }
         else {
+
+            if (Input.GetKeyDown("p"))
+            {
+                scoreController.ChangeScore(1);
+            }
+            if (Input.GetKeyDown("l"))
+            {
+                scoreController.ChangeScore(-1);
+            }
+            if (Input.GetKeyDown("o"))
+            {
+                gameOver = false;
+                EndGame();
+            }
+
             //otherwise galeplay !!!
             if (Time.time > nextObstacleSpawnTime)
             {
@@ -95,7 +97,6 @@ public class GameController : MonoBehaviour
                     rightSpawner.SpawnObstacle(spawnTag, moveDirection);
                 }
                 nextObstacleSpawnTime = Time.time + obstacleSpawnRate;
-                print("Tage: " + spawnTag + " - Direction: " + moveDirection.ToString() + " - New Spawn Time: " + nextObstacleSpawnTime + " - Time: " + Time.time);
             }
         }
     }
@@ -135,7 +136,7 @@ public class GameController : MonoBehaviour
     }
 
     /// <summary>
-    /// Finish The Game
+    /// Finish The Game, Display Score, Fade to Black
     /// </summary>
     public void EndGame()
     {
@@ -144,10 +145,8 @@ public class GameController : MonoBehaviour
         {
             gameOver = true;
             gameOverTimeout = Time.time + gameOverTimeout;
-            scoreText.enabled = false;
-            gameOverText.text = "Game Over";
-            float endScore = totalScore;
-            endScoreText.text = "Score: " + endScore;
+            scoreController.ShowScore(false);
+            scoreController.ShowEndScore(true);
         }
     }
 }
