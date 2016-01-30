@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 741effa0373cf4caab0c3edf585f00ad
+timeCreated: 1454188169
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: car sprite sheet_0
+    21300002: car sprite sheet_1
+    21300004: car sprite sheet_2
+    21300006: car sprite sheet_3
+    21300008: car sprite sheet_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: car sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1378
+        width: 352
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 122, y: -86.5}
+        - {x: 173, y: -54.5}
+        - {x: 176, y: -52.5}
+        - {x: 176, y: -17.5}
+        - {x: 159, y: 16.5}
+        - {x: 93, y: 65.5}
+        - {x: 42, y: 86.5}
+        - {x: -32, y: 86.5}
+        - {x: -54, y: 76.5}
+        - {x: -169, y: -2.5}
+        - {x: -176, y: -23.5}
+        - {x: -176, y: -50.5}
+        - {x: -157, y: -82.5}
+        - {x: -145, y: -86.5}
+        - {x: -100, y: -86.5}
+        - {x: -73, y: -56.5}
+        - {x: 86, y: -83.5}
+        - {x: 95, y: -86.5}
+    - name: car sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1378
+        width: 351
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 117.5, y: -86.5}
+        - {x: 175.5, y: -58.5}
+        - {x: 175.5, y: -14.5}
+        - {x: 155.5, y: 10.5}
+        - {x: 97.5, y: 63.5}
+        - {x: 47.5, y: 86.5}
+        - {x: -42.5, y: 86.5}
+        - {x: -65.5, y: 44.5}
+        - {x: -122.5, y: 24.5}
+        - {x: -164.5, y: -5.5}
+        - {x: -175.5, y: -13.5}
+        - {x: -175.5, y: -48.5}
+        - {x: -158.5, y: -86.5}
+        - {x: -104.5, y: -86.5}
+        - {x: -80.5, y: -58.5}
+        - {x: 60.5, y: -54.5}
+        - {x: 84.5, y: -86.5}
+    - name: car sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 1415
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: car sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 1379
+        width: 351
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 142.5, y: -85.5}
+        - {x: 175.5, y: -57.5}
+        - {x: 175.5, y: -21.5}
+        - {x: 159.5, y: 4.5}
+        - {x: 82.5, y: 69.5}
+        - {x: 45.5, y: 85.5}
+        - {x: -33.5, y: 85.5}
+        - {x: -119.5, y: 36.5}
+        - {x: -175.5, y: -10.5}
+        - {x: -175.5, y: -47.5}
+        - {x: -145.5, y: -85.5}
+        - {x: -103.5, y: -85.5}
+        - {x: -79.5, y: -60.5}
+        - {x: 60.5, y: -65.5}
+        - {x: 94.5, y: -85.5}
+    - name: car sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1413
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
