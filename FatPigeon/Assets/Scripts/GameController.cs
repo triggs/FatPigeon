@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
     public int liveCount = 3; // Misses or Bads Lose player 1 Life
     public float totalScore;
     public float gameTimer = 30.0f;
+
     public enum PassFailTime
     {
         Pass,
@@ -50,7 +51,7 @@ public class GameController : MonoBehaviour
     {
         rightSpawner = GameObject.FindGameObjectWithTag("RightSpawner").GetComponent<Spawner>();
         leftSpawner = GameObject.FindGameObjectWithTag("LeftSpawner").GetComponent<Spawner>();
-        obstacleSpawnRate = 300000.0f;
+        obstacleSpawnRate = 2.0f;
         nextObstacleSpawnTime = 3.0f;
     }
 
@@ -72,32 +73,29 @@ public class GameController : MonoBehaviour
             if (Time.time > nextObstacleSpawnTime)
             {
                 string spawnTag = GetObstacleToSpawn();
-                Vector3 moveDirection;
-                //spawn new schrooms
-                moveDirection = new Vector3(obstacleMoveSpeed, 0.0f);
-                if (spawnTag == "Car")
+                Vector3 moveDirection = new Vector3(-obstacleMoveSpeed, 0.0f);
+                //spawn new obstacles
+                if (spawnTag.Contains("Car"))
                 {
-                    //Random Side
-                    if(UnityEngine.Random.value > 0.5f)
-                    {
-                        //rightSide Car
-                        moveDirection = new Vector3(-obstacleMoveSpeed, 0.0f);
-                        rightSpawner.SpawnObstacle(spawnTag, moveDirection);
-                    }
-                    else
-                    {
-                        //leftSide car 
-                        leftSpawner.SpawnObstacle(spawnTag, moveDirection);
-                    }
+                    //    //Random Side
+                    //    if(UnityEngine.Random.value > 0.5f)
+                    //    {
+                    //        //rightSide Car
+                    // rightSpawner.SpawnObstacle("Car", moveDirection);
+                    //    }
+                    //    else
+                    //    {
+                    //        //leftSide car 
+                    //        moveDirection = new Vector3(obstacleMoveSpeed, 0.0f);
+                    //        leftSpawner.SpawnObstacle("Car", moveDirection);
+                    //    }
                 }
                 else
                 {
                     rightSpawner.SpawnObstacle(spawnTag, moveDirection);
                 }
-                print("Set new Spawn Time");
                 nextObstacleSpawnTime = Time.time + obstacleSpawnRate;
-                //print(Time.time + " " + nextObstacleSpawnTime);
-
+                print("Tage: " + spawnTag + " - Direction: " + moveDirection.ToString() + " - New Spawn Time: " + nextObstacleSpawnTime + " - Time: " + Time.time);
             }
         }
     }

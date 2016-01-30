@@ -6,21 +6,17 @@ using System.Collections;
  * Spawns Bugs
  * 
  * */
-public class Spawner : MonoBehaviour {
-	
-	//visible vars
-	public GameController gameController;
+public class Spawner : MonoBehaviour
+{	
     //private vars
     private float NextSpawn;
 
     void Start()
     {
-        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     public void SpawnObstacle(string objectTagName, Vector3 moveDirection)
     {
-        print(objectTagName);
 		GameObject obstacle = Instantiate((Resources.Load(objectTagName)), transform.position, Quaternion.identity) as GameObject;
         obstacle.SendMessage("SetMoveDirection", moveDirection);
     }
