@@ -13,8 +13,12 @@ public class CarController : MonoBehaviour {
         transform.Translate(Vector3.right * 1.0f * Time.deltaTime);
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        print(coll.gameObject.name);
+        //when a mushroom enters the collider, destroy it
+        if (other.tag == "Tree")
+        {
+            Destroy(this);
+        }
     }
 }

@@ -10,6 +10,15 @@ public class TreeController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        print(this.tag);
 	}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //when a mushroom enters the collider, destroy it
+        if (other.tag == "Car")
+        {
+
+        }
+    }
 }
