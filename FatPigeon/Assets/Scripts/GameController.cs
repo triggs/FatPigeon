@@ -21,9 +21,11 @@ public class GameController : MonoBehaviour
     private float gameOverTimeout = 10.0f;
     public float gameTimer = 30.0f;
     private ScoreController scoreController;
-    public float obstaclePositionGround = -1.5f;
-    public float obstaclePositionMiddle = -0.5f;
-    public float obstaclePositionTop = 1;
+    public float obstaclePositionGround = -1.5f; // Player, Cat Crack
+    public float obstaclePositionMiddle = -0.5f; // Car Right
+    public float obstaclePositionTop = 1; // Car Left
+    public float obstaclePositionTree = 0f; //Tree 
+
 
     public enum PassFailTime
     {
@@ -106,7 +108,22 @@ public class GameController : MonoBehaviour
                 }
                 else
                 {
-                    rightSpawner.SpawnObstacle(spawnTag, moveDirection, new Vector3(rightSpawner.transform.position.x, obstaclePositionGround, 0));
+                    //Lower chances of seeing trees since we're not using them.
+                    if (spawnTag == "Tree")
+                    {
+                        if (UnityEngine.Random.value > 0.6f)
+                            spawnTag = "Tree";
+                        else
+                            spawnTag = GetObstacleToSpawn();
+                    }
+                        if (spawnTag == "Tree")
+                    {
+                        rightSpawner.SpawnObstacle(spawnTag, moveDirection, new Vector3(rightSpawner.transform.position.x, obstaclePositionTree, 0));
+                    }
+                    else
+                    {
+                        rightSpawner.SpawnObstacle(spawnTag, moveDirection, new Vector3(rightSpawner.transform.position.x, obstaclePositionGround, 0));
+                    }
                 }
                 nextObstacleSpawnTime = Time.time + obstacleSpawnRate;
             }
