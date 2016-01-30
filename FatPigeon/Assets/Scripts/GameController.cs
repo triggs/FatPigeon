@@ -7,8 +7,12 @@ public class GameController : MonoBehaviour
 {
 
     public float obstacleSpawnRate; //objects spawn after x milliseconds
-    public float obstacleMoveSpeed = 1.0f;
-    public Spawner rightSpawner;
+
+    public float foregroundMoveSpeed;
+	public float middlegroundMoveSpeed;
+	public float backgroundMoveSpeed;
+    
+	public Spawner rightSpawner;
     public Spawner leftSpawner;
     public float nextObstacleSpawnTime;
     public int liveCount = 3; // Misses or Bads Lose player 1 Life
@@ -40,6 +44,10 @@ public class GameController : MonoBehaviour
         nextObstacleSpawnTime = 3.0f;
         scoreController = new ScoreController();
         scoreController.ShowScore();
+
+		foregroundMoveSpeed = 2.0f;
+		middlegroundMoveSpeed = 1.5f;
+		backgroundMoveSpeed = 1.0f;
     }
 
     /// <summary>
@@ -75,7 +83,7 @@ public class GameController : MonoBehaviour
             if (Time.time > nextObstacleSpawnTime)
             {
                 string spawnTag = GetObstacleToSpawn();
-                Vector3 moveDirection = new Vector3(-obstacleMoveSpeed, 0.0f);
+                Vector3 moveDirection = new Vector3(-foregroundMoveSpeed, 0.0f);
                 //spawn new obstacles
                 if (spawnTag.Contains("Car"))
                 {
@@ -88,7 +96,7 @@ public class GameController : MonoBehaviour
                     else
                     {
                         //leftSide car 
-                        moveDirection = new Vector3(obstacleMoveSpeed, 0.0f);
+                        moveDirection = new Vector3(foregroundMoveSpeed, 0.0f);
                         leftSpawner.SpawnObstacle("Car", moveDirection);
                     }
                 }
