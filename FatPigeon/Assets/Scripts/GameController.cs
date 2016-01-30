@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
 
     public float obstacleSpawnRate; //objects spawn after x milliseconds
+	public float obstacleMoveSpeed;
 
     public float foregroundMoveSpeed;
 	public float middlegroundMoveSpeed;
@@ -47,7 +48,7 @@ public class GameController : MonoBehaviour
         nextObstacleSpawnTime = 3.0f;
         scoreController = new ScoreController();
         scoreController.ShowScore();
-
+		obstacleMoveSpeed = 1.0f;
 		foregroundMoveSpeed = 0.4f;
 		middlegroundMoveSpeed = 1.0f;
 		backgroundMoveSpeed = 0.08f;
