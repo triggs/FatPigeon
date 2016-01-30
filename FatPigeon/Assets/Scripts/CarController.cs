@@ -1,24 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CarController : MonoBehaviour {
+public class CarController : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        transform.Translate(Vector3.right * 1.0f * Time.deltaTime);
+    private bool right; // spawns at right, moves right to left
+    private GameController gameController;
+    private Vector3 moveDirection;
+
+    public void SetMoveDirection(Vector3 _moveDirection)
+    {
+        moveDirection = _moveDirection;
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(moveDirection);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //when a mushroom enters the collider, destroy it
         if (other.tag == "Tree")
         {
-            Destroy(this);
         }
     }
 }

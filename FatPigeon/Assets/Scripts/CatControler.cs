@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TreeController : MonoBehaviour {
+public class CatController : MonoBehaviour {
 
     private Vector3 moveDirection;
 
@@ -18,12 +18,5 @@ public class TreeController : MonoBehaviour {
     void Update()
     {
         transform.Translate(moveDirection);
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Car")
-        {
-        }
     }
 }
