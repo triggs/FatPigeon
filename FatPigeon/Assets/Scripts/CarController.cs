@@ -10,6 +10,11 @@ public class CarController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    
-	}
+        transform.Translate(Vector3.right * 1.0f * Time.deltaTime);
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        print(coll.gameObject.name);
+    }
 }
