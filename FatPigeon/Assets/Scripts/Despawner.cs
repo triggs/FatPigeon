@@ -20,4 +20,9 @@ public class Despawner : MonoBehaviour {
         //print("Despawner hit: " + other.tag);
         Destroy(other.gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        print("Despawner: " + other.tag);
+    }
 }
