@@ -9,13 +9,19 @@ public class PlayerController : MonoBehaviour
 	public bool isRolling;
 	private Animator animator;
 	public GameController gameController;
-	// Use this for initialization
-	void Start ()
+    // collider flags
+    public bool collideWithTree;
+    public bool collideWithCat;
+    public bool collideWithLeftCar;
+    public bool collideWithCrack;
+    public bool collideWithRightCar;
+    // Use this for initialization
+    void Start ()
 	{
 		
 		this.body = GetComponent<Rigidbody2D> ();
 		this.animator = GetComponent<Animator>();
-//		this.gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+		this.gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 	}
 	bool Grounded;
 	// Update is called once per frame
@@ -40,6 +46,11 @@ public class PlayerController : MonoBehaviour
 			}
 		} else if (Input.GetKeyDown ("a")) {
 			print ("a was pressed");
+            if ((collideWithCat) || (collideWithCrack) || (collideWithLeftCar))
+            {
+                print("Gotcha!");
+                gameController.SendMessage("AddScore", 1);
+            }
 		} else if (Input.GetKeyDown ("s")) {
 
 			//we roll if
@@ -51,9 +62,14 @@ public class PlayerController : MonoBehaviour
 			//animation ends - how to know this
 			//did jump
 
-			print ("s was pressed");
+            // check collision
 		} else if (Input.GetKeyDown ("d")) {
 			print ("d was pressed");
+            if ((collideWithCat) || (collideWithCrack) || (collideWithLeftCar))
+            {
+                print("Gotcha!");
+                gameController.SendMessage("AddScore", 1);
+            }
 		}
 	}
 
@@ -90,7 +106,7 @@ public class PlayerController : MonoBehaviour
 	
 	}
 
-	void OnCollisionStay2D(Collision2D collider)
+    void OnCollisionStay2D(Collision2D collider)
 	{
 		CheckIfGrounded ();
 	}
@@ -98,9 +114,10 @@ public class PlayerController : MonoBehaviour
 	void OnCollisionExit2D(Collision2D collider)
 	{
 		Grounded = false;
-	}
+        collideWithCat = collideWithCrack = collideWithLeftCar = collideWithRightCar = collideWithTree = false;
+    }
 
-	private void CheckIfGrounded()
+    private void CheckIfGrounded()
 	{
 		RaycastHit2D[] hits;
 
@@ -113,6 +130,32 @@ public class PlayerController : MonoBehaviour
 			Grounded = true;
 		}
 	}
+
+    void SetCollideWithCat(bool value)
+    {
+        collideWithCat = value;
+    }
+
+    void SetCollideWithCrack(bool value)
+    {
+        collideWithCrack = value;
+    }
+
+    void SetCollideWithLeftCar(bool value)
+    {
+        collideWithLeftCar = value;
+    }
+
+    void SetCollideWithRightCar(bool value)
+    {
+        collideWithRightCar = value;
+    }
+
+    void SetCollideWithTree(bool value)
+    {
+        collideWithTree = value;
+    }
+
 
 	public void didFinishRoll() {
 		this.isRolling = false;

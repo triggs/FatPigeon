@@ -22,9 +22,10 @@ public class TreeController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Car")
-        {
-        }
+        //if (other.tag == "Pigeon")
+        //{
+        //    print("Tree collides with pigeon.");
+        //}
     }
 
     void SetStartPosition(Vector3 newPosition)
