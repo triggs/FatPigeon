@@ -45,9 +45,9 @@ public class GameController : MonoBehaviour
         scoreController = new ScoreController();
         scoreController.ShowScore();
 
-		foregroundMoveSpeed = 2.0f;
-		middlegroundMoveSpeed = 1.5f;
-		backgroundMoveSpeed = 1.0f;
+		foregroundMoveSpeed = 0.4f;
+		middlegroundMoveSpeed = 1.0f;
+		backgroundMoveSpeed = 0.08f;
     }
 
     /// <summary>
