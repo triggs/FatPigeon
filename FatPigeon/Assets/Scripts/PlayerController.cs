@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 
 	private Rigidbody2D body;
 	public bool isJumping;
+	public bool isRolling;
 	private Animator animator;
 	public GameController gameController;
 	// Use this for initialization
@@ -40,6 +41,16 @@ public class PlayerController : MonoBehaviour
 		} else if (Input.GetKeyDown ("a")) {
 			print ("a was pressed");
 		} else if (Input.GetKeyDown ("s")) {
+
+			//we roll if
+			//not rolling AND not jumping
+			if (this.Grounded && !this.isJumping) {
+				this.animator.SetTrigger ("isRolling");
+			}
+			//we stop rolling if
+			//animation ends - how to know this
+			//did jump
+
 			print ("s was pressed");
 		} else if (Input.GetKeyDown ("d")) {
 			print ("d was pressed");
@@ -101,6 +112,11 @@ public class PlayerController : MonoBehaviour
 		if (hits.Length > 0) {
 			Grounded = true;
 		}
+	}
+
+	public void didFinishRoll() {
+		this.isRolling = false;
+		this.animator.ResetTrigger ("isRolling");
 	}
 
 }
