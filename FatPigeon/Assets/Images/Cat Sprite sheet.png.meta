@@ -1,0 +1,594 @@
+fileFormatVersion: 2
+guid: 1163d38a251c34e9f9ce14a774550d36
+timeCreated: 1454191283
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Cat Sprite sheet_0
+    21300002: Cat Sprite sheet_1
+    21300004: Cat Sprite sheet_2
+    21300006: Cat Sprite sheet_3
+    21300008: Cat Sprite sheet_4
+    21300010: Cat Sprite sheet_5
+    21300012: Cat Sprite sheet_6
+    21300014: Cat Sprite sheet_7
+    21300016: Cat Sprite sheet_8
+    21300018: Cat Sprite sheet_9
+    21300020: Cat Sprite sheet_10
+    21300022: Cat Sprite sheet_11
+    21300024: Cat Sprite sheet_12
+    21300026: Cat Sprite sheet_13
+    21300028: Cat Sprite sheet_14
+    21300030: Cat Sprite sheet_15
+    21300032: Cat Sprite sheet_16
+    21300034: Cat Sprite sheet_17
+    21300036: Cat Sprite sheet_18
+    21300038: Cat Sprite sheet_19
+    21300040: Cat Sprite sheet_20
+    21300042: Cat Sprite sheet_21
+    21300044: Cat Sprite sheet_22
+    21300046: Cat Sprite sheet_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Cat Sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1454
+        width: 329
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38.5, y: 30}
+        - {x: 20.5, y: 32}
+        - {x: -1.5, y: 32}
+        - {x: -64.5, y: 49}
+        - {x: -86.5, y: 51}
+        - {x: -134.5, y: 51}
+        - {x: -164.5, y: 32}
+        - {x: -164.5, y: -51}
+        - {x: 159.5, y: -51}
+        - {x: 164.5, y: -42}
+        - {x: 164.5, y: -9}
+        - {x: 162.5, y: -2}
+    - name: Cat Sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1454
+        width: 329
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63.5, y: 51}
+        - {x: -136.5, y: 51}
+        - {x: -164.5, y: -3}
+        - {x: -164.5, y: -51}
+        - {x: 161.5, y: -51}
+        - {x: 164.5, y: -46}
+        - {x: 164.5, y: -9}
+        - {x: 151.5, y: 7}
+    - name: Cat Sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1454
+        width: 330
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -149, y: 51}
+        - {x: -165, y: -16}
+        - {x: -165, y: -51}
+        - {x: 165, y: -51}
+        - {x: 165, y: -6}
+        - {x: 77, y: 51}
+    - name: Cat Sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1454
+        width: 329
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 152.5, y: 23}
+        - {x: 20.5, y: 51}
+        - {x: -157.5, y: 51}
+        - {x: -164.5, y: 23}
+        - {x: -164.5, y: -51}
+        - {x: 164.5, y: -51}
+        - {x: 164.5, y: -12}
+        - {x: 162.5, y: -6}
+    - name: Cat Sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1279
+        width: 329
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -140.5, y: 51}
+        - {x: -164.5, y: -10}
+        - {x: -164.5, y: -51}
+        - {x: 57.5, y: -51}
+        - {x: 164.5, y: -36}
+        - {x: 164.5, y: 38}
+        - {x: 89.5, y: 51}
+    - name: Cat Sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1279
+        width: 329
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -146.5, y: 51}
+        - {x: -164.5, y: -6}
+        - {x: -164.5, y: -51}
+        - {x: 51.5, y: -51}
+        - {x: 164.5, y: -37}
+        - {x: 164.5, y: 22}
+        - {x: 150.5, y: 51}
+    - name: Cat Sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1279
+        width: 330
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 152, y: 31}
+        - {x: 113, y: 20}
+        - {x: 113, y: 5}
+        - {x: 22, y: 34}
+        - {x: -50, y: 51}
+        - {x: -133, y: 51}
+        - {x: -165, y: -22}
+        - {x: -165, y: -49}
+        - {x: -161, y: -51}
+        - {x: 47, y: -51}
+        - {x: 165, y: -17}
+        - {x: 165, y: 9}
+    - name: Cat Sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1279
+        width: 329
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 156.5, y: 7}
+        - {x: 47.5, y: 34}
+        - {x: -132.5, y: 34}
+        - {x: -164.5, y: -9}
+        - {x: -164.5, y: -48}
+        - {x: 146.5, y: -48}
+        - {x: 164.5, y: -37}
+        - {x: 164.5, y: -7}
+      - - {x: -117.5, y: 48}
+        - {x: -117.5, y: 46}
+        - {x: -115.5, y: 44}
+        - {x: -113.5, y: 44}
+        - {x: -111.5, y: 46}
+        - {x: -111.5, y: 48}
+    - name: Cat Sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 1111
+        width: 329
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 75.5, y: 33.5}
+        - {x: -152.5, y: 33.5}
+        - {x: -164.5, y: 1.5}
+        - {x: -164.5, y: -47.5}
+        - {x: 150.5, y: -47.5}
+        - {x: 164.5, y: -37.5}
+        - {x: 164.5, y: -7.5}
+        - {x: 154.5, y: 8.5}
+      - - {x: -118.5, y: 47.5}
+        - {x: -118.5, y: 45.5}
+        - {x: -116.5, y: 43.5}
+        - {x: -113.5, y: 43.5}
+        - {x: -111.5, y: 45.5}
+        - {x: -111.5, y: 47.5}
+    - name: Cat Sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1111
+        width: 329
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -136.5, y: 33.5}
+        - {x: -155.5, y: 21.5}
+        - {x: -164.5, y: 0.5}
+        - {x: -164.5, y: -47.5}
+        - {x: 164.5, y: -47.5}
+        - {x: 164.5, y: 0.5}
+        - {x: 56.5, y: 33.5}
+      - - {x: -117.5, y: 47.5}
+        - {x: -117.5, y: 45.5}
+        - {x: -115.5, y: 43.5}
+        - {x: -112.5, y: 43.5}
+        - {x: -110.5, y: 45.5}
+        - {x: -110.5, y: 47.5}
+    - name: Cat Sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1111
+        width: 330
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -133, y: 33.5}
+        - {x: -165, y: 6.5}
+        - {x: -165, y: -47.5}
+        - {x: 165, y: -47.5}
+        - {x: 165, y: 4.5}
+        - {x: 123, y: 33.5}
+      - - {x: -117, y: 47.5}
+        - {x: -117, y: 45.5}
+        - {x: -115, y: 43.5}
+        - {x: -113, y: 43.5}
+        - {x: -111, y: 45.5}
+        - {x: -111, y: 47.5}
+    - name: Cat Sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 1079
+        width: 298
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 63.5}
+        - {x: -149, y: 63.5}
+        - {x: -149, y: -63.5}
+        - {x: 120, y: -63.5}
+        - {x: 149, y: -56.5}
+        - {x: 149, y: -19.5}
+    - name: Cat Sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 832
+        width: 298
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 56, y: -13.5}
+        - {x: 57, y: -15.5}
+        - {x: 58, y: -25.5}
+        - {x: 106, y: -58.5}
+        - {x: 130, y: -60.5}
+        - {x: 148, y: -54.5}
+        - {x: 149, y: -49.5}
+        - {x: 149, y: -15.5}
+        - {x: 147, y: -10.5}
+        - {x: 29, y: 63.5}
+        - {x: -149, y: 63.5}
+        - {x: -149, y: -63.5}
+        - {x: 51, y: -63.5}
+        - {x: 55, y: -17.5}
+        - {x: 57, y: -13.5}
+    - name: Cat Sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 832
+        width: 246
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -97, y: 103}
+        - {x: -123, y: 96}
+        - {x: -123, y: 46}
+        - {x: -102, y: -38}
+        - {x: -77, y: -45}
+        - {x: -74, y: -30}
+        - {x: -66, y: -89}
+        - {x: -60, y: -103}
+        - {x: 19, y: -103}
+        - {x: 123, y: -80}
+        - {x: 123, y: -48}
+        - {x: -33, y: 103}
+    - name: Cat Sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 832
+        width: 246
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 123, y: -1}
+        - {x: -25, y: 103}
+        - {x: -123, y: 103}
+        - {x: -123, y: 3}
+        - {x: -116, y: -50}
+        - {x: -65, y: -100}
+        - {x: -58, y: -102}
+        - {x: -51, y: -103}
+        - {x: -13, y: -103}
+        - {x: -2, y: -92}
+        - {x: 72, y: -82}
+        - {x: 123, y: -72}
+    - name: Cat Sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 808
+        width: 328
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 102, y: -85}
+        - {x: 123, y: -78}
+        - {x: 150, y: -115}
+        - {x: 164, y: -115}
+        - {x: 164, y: -56}
+        - {x: 98, y: 74}
+        - {x: 40, y: 115}
+        - {x: -158, y: 115}
+        - {x: -164, y: 109}
+        - {x: -164, y: 9}
+        - {x: 37, y: -115}
+        - {x: 48, y: -115}
+        - {x: 54, y: -103}
+        - {x: 58, y: -79}
+        - {x: 57, y: -68}
+    - name: Cat Sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 529
+        width: 328
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 115}
+        - {x: -150, y: 115}
+        - {x: -164, y: 91}
+        - {x: -164, y: 20}
+        - {x: -163, y: 19}
+        - {x: -22, y: -115}
+        - {x: 153, y: -115}
+        - {x: 164, y: -107}
+        - {x: 164, y: -62}
+        - {x: -9, y: 109}
+    - name: Cat Sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 593
+        width: 348
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 155, y: 70}
+        - {x: -131, y: 70}
+        - {x: -163, y: 52}
+        - {x: -174, y: 32}
+        - {x: -174, y: -70}
+        - {x: -135, y: -70}
+        - {x: -18, y: -32}
+        - {x: 56, y: -70}
+        - {x: 157, y: -70}
+        - {x: 174, y: -56}
+        - {x: 174, y: 32}
+    - name: Cat Sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 593
+        width: 348
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 155, y: 70}
+        - {x: -131, y: 70}
+        - {x: -163, y: 52}
+        - {x: -174, y: 32}
+        - {x: -174, y: -70}
+        - {x: -135, y: -70}
+        - {x: -18, y: -32}
+        - {x: 56, y: -70}
+        - {x: 157, y: -70}
+        - {x: 174, y: -56}
+        - {x: 174, y: 32}
+    - name: Cat Sprite sheet_19
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 224
+        width: 244
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44, y: -117}
+        - {x: 122, y: 84}
+        - {x: 122, y: 130}
+        - {x: -4, y: 130}
+        - {x: -78, y: 110}
+        - {x: -122, y: 29}
+        - {x: -122, y: -60}
+        - {x: -97, y: -130}
+        - {x: -76, y: -130}
+        - {x: -74, y: -129}
+        - {x: -55, y: -130}
+        - {x: -52, y: -130}
+    - name: Cat Sprite sheet_20
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 235
+        width: 244
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 130}
+        - {x: -122, y: 23}
+        - {x: -122, y: -69}
+        - {x: -99, y: -130}
+        - {x: -20, y: -130}
+        - {x: 122, y: 46}
+        - {x: 122, y: 118}
+        - {x: 109, y: 130}
+    - name: Cat Sprite sheet_21
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 235
+        width: 141
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70.5, y: 121}
+        - {x: -70.5, y: -121}
+        - {x: 19.5, y: -121}
+        - {x: 21.5, y: -119}
+        - {x: 70.5, y: 67}
+        - {x: 70.5, y: 121}
+    - name: Cat Sprite sheet_22
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 244
+        width: 142
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 121}
+        - {x: -71, y: 68}
+        - {x: -71, y: -100}
+        - {x: -65, y: -121}
+        - {x: 18, y: -121}
+        - {x: 21, y: -119}
+        - {x: 71, y: 77}
+        - {x: 71, y: 121}
+    - name: Cat Sprite sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 244
+        width: 207
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 42.5, y: 40}
+        - {x: -5.5, y: 78}
+        - {x: -103.5, y: 78}
+        - {x: -103.5, y: -1}
+        - {x: -72.5, y: -78}
+        - {x: 13.5, y: -78}
+        - {x: 50.5, y: -70}
+        - {x: 103.5, y: -51}
+        - {x: 103.5, y: -23}
+        - {x: 94.5, y: -20}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

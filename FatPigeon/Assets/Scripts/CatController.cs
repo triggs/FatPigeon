@@ -18,6 +18,8 @@ public class CatController : MonoBehaviour {
     void Update()
     {
         transform.Translate(moveDirection);
+
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
