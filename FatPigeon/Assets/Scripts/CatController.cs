@@ -18,12 +18,18 @@ public class CatController : MonoBehaviour {
     void Update()
     {
         transform.Translate(moveDirection);
+
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
     }
 
+    /// <summary>
+    /// Sets the gameobject's start position
+    /// </summary>
+    /// <param name="newPosition"></param>
     void SetStartPosition(Vector3 newPosition)
     {
         transform.position = newPosition;
