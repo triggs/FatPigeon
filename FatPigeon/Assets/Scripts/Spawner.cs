@@ -18,7 +18,6 @@ public class Spawner : MonoBehaviour
 
     public void SpawnObstacle(string objectTagName, Vector3 moveDirection, Vector3 startPosition)
     {
-        //print("Spawning: " + objectTagName + ", " + moveDirection.x.ToString() + ", " + moveDirection.y.ToString() + ", " + moveDirection.z.ToString());
         Object prefab = Resources.Load(objectTagName);
         //print(prefab);
         GameObject obstacle = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
