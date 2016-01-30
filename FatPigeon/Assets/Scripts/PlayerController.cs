@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 
 	private Rigidbody2D body;
 	public bool isJumping;
+	public bool isRolling;
 	private Animator animator;
 	public GameController gameController;
     // collider flags
@@ -50,8 +51,16 @@ public class PlayerController : MonoBehaviour
                 print("Gotcha!");
                 gameController.SendMessage("AddScore", 1);
             }
-        } else if (Input.GetKeyDown ("s")) {
-			print ("s was pressed");
+		} else if (Input.GetKeyDown ("s")) {
+
+			//we roll if
+			//not rolling AND not jumping
+			if (this.Grounded && !this.isJumping) {
+				this.animator.SetTrigger ("isRolling");
+			}
+			//we stop rolling if
+			//animation ends - how to know this
+			//did jump
 
             // check collision
 		} else if (Input.GetKeyDown ("d")) {
@@ -148,5 +157,9 @@ public class PlayerController : MonoBehaviour
     }
 
 
+	public void didFinishRoll() {
+		this.isRolling = false;
+		this.animator.ResetTrigger ("isRolling");
+	}
 
 }
