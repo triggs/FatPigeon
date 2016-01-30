@@ -16,12 +16,11 @@ public class GameController : MonoBehaviour
 	public Spawner rightSpawner;
     public Spawner leftSpawner;
     public float nextObstacleSpawnTime;
-    public int liveCount = 3; // Misses or Bads Lose player 1 Life
     public bool gameOver = false;
     private float gameOverTimeout = 10.0f;
     public float gameTimer = 30.0f;
     private ScoreController scoreController;
-    public float obstaclePositionGround = -1.5f; // Player, Cat Crack
+    public float obstaclePositionGround = -3.5f; // Player, Cat Crack
     public float obstaclePositionMiddle = -0.5f; // Car Right
     public float obstaclePositionTop = 1; // Car Left
     public float obstaclePositionTree = 0f; //Tree 
@@ -46,7 +45,7 @@ public class GameController : MonoBehaviour
     {
         rightSpawner = GameObject.FindGameObjectWithTag("RightSpawner").GetComponent<Spawner>();
         leftSpawner = GameObject.FindGameObjectWithTag("LeftSpawner").GetComponent<Spawner>();
-        obstacleSpawnRate = 0.3f;
+        obstacleSpawnRate = 1.5f;
         nextObstacleSpawnTime = 3.0f;
         scoreController = new ScoreController();
         scoreController.ShowScore();
