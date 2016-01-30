@@ -19,7 +19,7 @@ public class ScoreController : MonoBehaviour {
     internal void ChangeScore(int changeByThisNumber)
     {
         totalScore += changeByThisNumber;
-        scoreText.text = String.Format("Score:{0}", totalScore);
+        scoreText.text = String.Format("Score: {0}", totalScore);
     }
 
     internal void ShowScore(bool show = true)
