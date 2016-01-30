@@ -28,6 +28,10 @@ public class TreeController : MonoBehaviour {
         //}
     }
 
+    /// <summary>
+    /// Sets the gameobject's start position
+    /// </summary>
+    /// <param name="newPosition"></param>
     void SetStartPosition(Vector3 newPosition)
     {
         transform.position = newPosition;
