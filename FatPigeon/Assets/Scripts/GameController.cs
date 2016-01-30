@@ -2,12 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System;
-/**
-* Derek Browne 05391903
-* 
-* Overall Game Controller
-* 
-* */
+
 public class GameController : MonoBehaviour
 {
 
