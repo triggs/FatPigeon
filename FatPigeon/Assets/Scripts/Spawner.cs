@@ -18,10 +18,15 @@ public class Spawner : MonoBehaviour
 
     public void SpawnObstacle(string objectTagName, Vector3 moveDirection)
     {
-        print("Spawning: " + objectTagName);
+        print("Spawning: " + objectTagName + ", " + moveDirection.x.ToString() + ", " + moveDirection.y.ToString() + ", " + moveDirection.z.ToString());
         Object prefab = Resources.Load(objectTagName);
         print(prefab);
         GameObject obstacle = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
+        if ((moveDirection.x < 0) && (objectTagName == "Car"))
+        {
+            obstacle.SendMessage("HorizontalMirrorAndShiftUp");
+            moveDirection = new Vector3(0-moveDirection.x, moveDirection.y, moveDirection.z);
+        }
         obstacle.SendMessage("SetMoveDirection", moveDirection);
     }
 }

@@ -22,7 +22,11 @@ public class Despawner : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
+<<<<<<< HEAD
         print("Despawner Exited: " + other.tag);
+=======
+        //print("Despawner hit: " + other.tag);
+>>>>>>> f2575ba538bb6311fcb67b96cf348f7df3e13601
         Destroy(other.gameObject);
     }
 }
