@@ -24,4 +24,9 @@ public class CrackController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
     }
+
+    void SetStartPosition(Vector3 newPosition)
+    {
+        transform.position = newPosition;
+    }
 }

@@ -30,11 +30,14 @@ public class CarController : MonoBehaviour
         print(other.tag);
     }
 
-    void HorizontalMirrorAndShiftUp()
+    void HorizontalMirror()
     {
         print("Let's mirror.");
         transform.Rotate(new Vector3(0, 180, 0));
-        var newPosition = new Vector3(20, -1, 0);
+    }
+
+    void SetStartPosition(Vector3 newPosition)
+    {
         transform.position = newPosition;
     }
 }

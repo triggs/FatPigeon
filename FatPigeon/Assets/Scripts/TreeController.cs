@@ -26,4 +26,9 @@ public class TreeController : MonoBehaviour {
         {
         }
     }
+
+    void SetStartPosition(Vector3 newPosition)
+    {
+        transform.position = newPosition;
+    }
 }
