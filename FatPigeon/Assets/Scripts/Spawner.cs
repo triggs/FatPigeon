@@ -23,6 +23,8 @@ public class Spawner : MonoBehaviour
         GameObject obstacle = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
         if ((moveDirection.x > 0) && (objectTagName == "Car"))
         {
+            //obstacle.tag = "RightCar";
+            obstacle.transform.tag = "RightCar";
             obstacle.SendMessage("HorizontalMirror");
             moveDirection = new Vector3(0-moveDirection.x, moveDirection.y, moveDirection.z);
         }

@@ -48,10 +48,13 @@ public class PlayerController : MonoBehaviour
 			print ("a was pressed");
             if ((collideWithCat) || (collideWithCrack) || (collideWithLeftCar))
             {
-                print("Gotcha!");
                 gameController.SendMessage("AddScore", 1);
             }
-		} else if (Input.GetKeyDown ("s")) {
+            else
+            {
+                gameController.SendMessage("AddScore", -1);
+            }
+        } else if (Input.GetKeyDown ("s")) {
 
 			//we roll if
 			//not rolling AND not jumping
@@ -65,12 +68,15 @@ public class PlayerController : MonoBehaviour
             // check collision
 		} else if (Input.GetKeyDown ("d")) {
 			print ("d was pressed");
-            if ((collideWithCat) || (collideWithCrack) || (collideWithLeftCar))
+            if ((collideWithCat) || (collideWithCrack) || (collideWithRightCar))
             {
-                print("Gotcha!");
                 gameController.SendMessage("AddScore", 1);
             }
-		}
+            else
+            {
+                gameController.SendMessage("AddScore", -1);
+            }
+        }
 	}
 
 	public bool checkIfJumping ()
