@@ -27,9 +27,7 @@ public class CarController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //if (other.tag == "Tree")
-        //{
-        //}
+        print(other.tag);
     }
 
     void HorizontalMirror()
