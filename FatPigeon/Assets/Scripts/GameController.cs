@@ -99,13 +99,8 @@ public class GameController : MonoBehaviour
                     else
                     {
                         //leftSide car 
-<<<<<<< HEAD
-                        moveDirection = new Vector3(foregroundMoveSpeed, 0.0f);
-                        leftSpawner.SpawnObstacle("Car", moveDirection);
-=======
                         moveDirection = new Vector3(obstacleMoveSpeed, 0.0f);
                         leftSpawner.SpawnObstacle("Car", moveDirection, new Vector3(leftSpawner.transform.position.x, obstaclePositionTop, 0));
->>>>>>> 6352a46ccf71106bcabbd0894d866a6aa5cb22ec
                     }
                 }
                 else
