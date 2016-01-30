@@ -16,6 +16,9 @@ public class GameController : MonoBehaviour
     private float gameOverTimeout = 10.0f;
     public float gameTimer = 30.0f;
     private ScoreController scoreController;
+    public float obstaclePositionGround = -1.5f;
+    public float obstaclePositionMiddle = -0.5f;
+    public float obstaclePositionTop = 1;
 
     public enum PassFailTime
     {
@@ -83,18 +86,18 @@ public class GameController : MonoBehaviour
                     if (UnityEngine.Random.value > 0.5f)
                     {
                         //rightSide Car
-                        rightSpawner.SpawnObstacle("Car", moveDirection);
+                        rightSpawner.SpawnObstacle("Car", moveDirection, new Vector3(rightSpawner.transform.position.x, obstaclePositionMiddle, 0));
                     }
                     else
                     {
                         //leftSide car 
                         moveDirection = new Vector3(obstacleMoveSpeed, 0.0f);
-                        leftSpawner.SpawnObstacle("Car", moveDirection);
+                        leftSpawner.SpawnObstacle("Car", moveDirection, new Vector3(leftSpawner.transform.position.x, obstaclePositionTop, 0));
                     }
                 }
                 else
                 {
-                    rightSpawner.SpawnObstacle(spawnTag, moveDirection);
+                    rightSpawner.SpawnObstacle(spawnTag, moveDirection, new Vector3(rightSpawner.transform.position.x, obstaclePositionGround, 0));
                 }
                 nextObstacleSpawnTime = Time.time + obstacleSpawnRate;
             }
