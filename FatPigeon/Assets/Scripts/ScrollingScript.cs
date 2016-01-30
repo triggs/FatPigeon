@@ -22,10 +22,6 @@ public class ScrollingScript : MonoBehaviour {
 	/// </summary>
 	public bool isLinkedToCamera = false;
 
-	/// <summary>
-	/// Sets if the sprite loops and is shown again
-	/// </summary>
-	public bool isLooping = false;
 
 	/// <summary>
 	/// The list of children with a renderer
@@ -34,41 +30,7 @@ public class ScrollingScript : MonoBehaviour {
 
 
 	void Start(){
-		// For infinitely scrolling sprites
-		if (isLooping) {
-
-
-
-
-			/*
-			// Get all the children of a layer with a renderer
-			backgroundPart = new List<Transform>();
-
-			for (int i = 0; i < transform.childCount; i++) {
-				Transform child = transform.GetChild(i);
-
-				print("backgroundPart has " + backgroundPart.Count().ToString() + " items");
-
-				if (child.GetComponent<Renderer>() != null) {
-					print ("Got to line 46");
-				}
-
-				// Only add the visible children
-				if (child.GetComponent<Renderer>() != null) {
-					backgroundPart.Add(child);
-				}
-
-				if(child.renderer != null){
-					backgroundPart.Add(child);
-				}
-			}
-
-			// Sort by position
-			backgroundPart = backgroundPart.OrderBy(
-				t => t.position.x
-			).ToList();
-			*/
-		}
+		
 	}
 
 
@@ -89,46 +51,6 @@ public class ScrollingScript : MonoBehaviour {
 			Camera.main.transform.Translate (movement);
 
 		}
-
-		/*
-		// If set to true, the sprite will loop infinitely
-		if(isLooping){
-			
-			// Get the first object, the list is ordered from left to right
-			Transform firstChild = backgroundPart.FirstOrDefault();
-
-			if (firstChild != null) {
-				print("firstChild is not null");
-
-				// Check if the child is partly before the camera
-				if (firstChild.position.x < Camera.main.transform.position.x) {
-					// If the child is to the left of the camera (outside the FOV)
-					// it checks to see if it needs to be recycled
-
-					//if (firstChild.renderer.IsVisibleFrom (Camera.main) == false) {
-					if (firstChild.GetComponent<Renderer>().isVisible == false){
-						// Get the last child position
-						Transform lastChild = backgroundPart.LastOrDefault ();
-						Vector3 lastPosition = lastChild.transform.position;
-						//Vector3 lastSize = (lastChild.renderer.bounds.max - lastChild.renderer.bounds.min);
-						Vector3 lastSize = (lastChild.GetComponent<Renderer>().bounds.max - 
-							lastChild.GetComponent<Renderer>().bounds.min);
-
-						// Set the position of the recycled sprite to be after the the last child
-						firstChild.position = new Vector3(
-							lastPosition.x + lastSize.x, 
-							firstChild.position.y, 
-							firstChild.position.z
-						);
-
-						backgroundPart.Remove (firstChild);
-						backgroundPart.Add (firstChild);
-
-					}
-				}
-			}
-
-			*/
 	}
 }
 
