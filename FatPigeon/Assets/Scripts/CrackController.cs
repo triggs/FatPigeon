@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CatController : MonoBehaviour {
+public class CrackController : MonoBehaviour {
 
     private Vector3 moveDirection;
 
@@ -9,6 +9,7 @@ public class CatController : MonoBehaviour {
     {
         moveDirection = _moveDirection;
     }
+
     // Use this for initialization
     void Start () {
 	

@@ -13,11 +13,15 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+
     }
 
     public void SpawnObstacle(string objectTagName, Vector3 moveDirection)
     {
-		GameObject obstacle = Instantiate((Resources.Load(objectTagName)), transform.position, Quaternion.identity) as GameObject;
+        print("Spawning: " + objectTagName);
+        Object prefab = Resources.Load(objectTagName);
+        print(prefab);
+        GameObject obstacle = Instantiate(prefab, transform.position, Quaternion.identity) as GameObject;
         obstacle.SendMessage("SetMoveDirection", moveDirection);
     }
 }

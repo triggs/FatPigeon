@@ -77,18 +77,18 @@ public class GameController : MonoBehaviour
                 //spawn new obstacles
                 if (spawnTag.Contains("Car"))
                 {
-                    //    //Random Side
-                    //    if(UnityEngine.Random.value > 0.5f)
-                    //    {
-                    //        //rightSide Car
-                    // rightSpawner.SpawnObstacle("Car", moveDirection);
-                    //    }
-                    //    else
-                    //    {
-                    //        //leftSide car 
-                    //        moveDirection = new Vector3(obstacleMoveSpeed, 0.0f);
-                    //        leftSpawner.SpawnObstacle("Car", moveDirection);
-                    //    }
+                    //Random Side
+                    if (UnityEngine.Random.value > 0.5f)
+                    {
+                        //rightSide Car
+                        rightSpawner.SpawnObstacle("Car", moveDirection);
+                    }
+                    else
+                    {
+                        //leftSide car 
+                        moveDirection = new Vector3(obstacleMoveSpeed, 0.0f);
+                        leftSpawner.SpawnObstacle("Car", moveDirection);
+                    }
                 }
                 else
                 {
@@ -102,7 +102,7 @@ public class GameController : MonoBehaviour
 
     private string GetObstacleToSpawn()
     {
-        var randomObjectIndex = UnityEngine.Random.Range(0, 4);
+        var randomObjectIndex = UnityEngine.Random.Range(0, 5);
         GameObjects obstacle = (GameObjects)randomObjectIndex;
         return obstacle.ToString();
     }
