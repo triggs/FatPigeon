@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
     public float obstaclePositionTop = 1; // Car Left
     public float obstaclePositionTree = 0f; //Tree 
 
+	public AudioSource audioSource; // Audio source for player sound effects
 
     public enum PassFailTime
     {
