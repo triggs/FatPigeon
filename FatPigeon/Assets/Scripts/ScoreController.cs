@@ -24,6 +24,12 @@ public class ScoreController : MonoBehaviour {
         scoreText.text = String.Format("Score: {0}", totalScore);
     }
 
+    internal void ResetScore()
+    {
+        totalScore = 0;
+        scoreText.text = String.Format("Score: {0}", totalScore);
+    }
+
     internal void ShowScore(bool show = true)
     {
 //        scoreText.enabled = show;
@@ -31,7 +37,7 @@ public class ScoreController : MonoBehaviour {
 
     internal void ShowEndScore(bool show = false)
     {
-        gameOverText.text = "Game Over";
+        gameOverText.text = "Game Over. Press Spacebar to re-start";
         gameOverText.enabled= show;
         endScoreText.text = String.Format("You Scored: {0}",totalScore.ToString());
         endScoreText.enabled = show;

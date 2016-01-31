@@ -27,6 +27,14 @@ public class PlayerController : MonoBehaviour
 	}
 	bool Grounded;
 	// Update is called once per frame
+    /* Scoring:
+    Car from the right (easy): 2pts
+    Car from the left (hugh speed): 5 pts
+    Jump over crack: 2pts
+    Roll under cat: 3pts
+    Wrong action: -1 pt (0 limit)
+    No interaction (stepping on a crack, meeting with the cat) : no punishment yet
+    */
 	void Update ()
 	{
 		if (this.isJumping) {//we were jumping
@@ -53,7 +61,7 @@ public class PlayerController : MonoBehaviour
 			}
             if (collideWithCrack)
             {
-                gameController.SendMessage("AddScore", 3);
+                gameController.SendMessage("AddScore", 2);
             }
             else
             {
@@ -63,7 +71,7 @@ public class PlayerController : MonoBehaviour
 			print ("a was pressed");
             if (collideWithLeftCar)
             {
-                gameController.SendMessage("AddScore", 3);
+                gameController.SendMessage("AddScore", 2);
             }
             else
             {
@@ -97,7 +105,7 @@ public class PlayerController : MonoBehaviour
 			print ("d was pressed");
             if (collideWithRightCar)
             {
-                gameController.SendMessage("AddScore", 3);
+                gameController.SendMessage("AddScore", 5);
             }
             else
             {
