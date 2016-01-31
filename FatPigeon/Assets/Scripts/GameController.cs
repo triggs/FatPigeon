@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
         nextObstacleSpawnTime = 3.0f;
         scoreController = new ScoreController();
         scoreController.ShowScore();
-		obstacleMoveSpeed = 1.0f;
+		obstacleMoveSpeed = 0.6f;
 		foregroundMoveSpeed = 0.2f;
 		middlegroundMoveSpeed = 1.0f;
 		backgroundMoveSpeed = 0.08f;
