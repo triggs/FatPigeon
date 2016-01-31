@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 public class ScoreController : MonoBehaviour {
 
@@ -41,5 +42,12 @@ public class ScoreController : MonoBehaviour {
         gameOverText.enabled= show;
         endScoreText.text = String.Format("You Scored: {0}",totalScore.ToString());
         endScoreText.enabled = show;
+
+		if (Input.GetKeyDown ("space")) {
+			print (SceneManager.GetActiveScene ().name);
+			SceneManager.LoadScene (0);
+			gameOverText.enabled= false;
+			endScoreText.enabled = false;
+		}
     }
 }
