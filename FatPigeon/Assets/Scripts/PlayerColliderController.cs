@@ -19,14 +19,32 @@ public class PlayerColliderController : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        //print("Despawner hit: " + other.tag);
-        // Destroy(other.gameObject);
         var sirPigeon = this.transform.parent.gameObject;
-        sirPigeon.SendMessage("SetCollideWithCat", false);
-        sirPigeon.SendMessage("SetCollideWithCrack", false);
-        sirPigeon.SendMessage("SetCollideWithLeftCar", false);
-        sirPigeon.SendMessage("SetCollideWithRightCar", false);
-        sirPigeon.SendMessage("SetCollideWithTree", false);
+        if (other.tag == "Tree")
+        {
+            // print("Tree has left the pigeon.");
+            sirPigeon.SendMessage("SetCollideWithTree", false);
+        }
+        if (other.tag == "Cat")
+        {
+            // print("Cat has left the pigeon.");
+            sirPigeon.SendMessage("SetCollideWithCat", false);
+        }
+        if (other.tag == "Crack")
+        {
+            // print("Crack has left the pigeon.");
+            sirPigeon.SendMessage("SetCollideWithCrack", false);
+        }
+        if (other.tag == "Car")
+        {
+            // print("Car has left the pigeon.");
+            sirPigeon.SendMessage("SetCollideWithLeftCar", false);
+        }
+        if (other.tag == "RightCar")
+        {
+            // print("Right car has left the pigeon.");
+            sirPigeon.SendMessage("SetCollideWithRightCar", false);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
