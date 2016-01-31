@@ -44,11 +44,19 @@ public class PlayerController : MonoBehaviour
 			} else {
 				print ("velocity was " + this.body.velocity.y);
 			}
-		} else if (Input.GetKeyDown ("a")) {
-			print ("a was pressed");
-            if ((collideWithCat) || (collideWithCrack) || (collideWithLeftCar))
+            if (collideWithCrack)
             {
-                gameController.SendMessage("AddScore", 1);
+                gameController.SendMessage("AddScore", 3);
+            }
+            else
+            {
+                gameController.SendMessage("AddScore", -1);
+            }
+        } else if (Input.GetKeyDown ("a")) {
+			print ("a was pressed");
+            if (collideWithLeftCar)
+            {
+                gameController.SendMessage("AddScore", 3);
             }
             else
             {
@@ -61,16 +69,24 @@ public class PlayerController : MonoBehaviour
 			if (this.Grounded && !this.isJumping) {
 				this.animator.SetTrigger ("isRolling");
 			}
-			//we stop rolling if
-			//animation ends - how to know this
-			//did jump
+            //we stop rolling if
+            //animation ends - how to know this
+            //did jump
 
             // check collision
-		} else if (Input.GetKeyDown ("d")) {
-			print ("d was pressed");
-            if ((collideWithCat) || (collideWithCrack) || (collideWithRightCar))
+            if (collideWithCat)
             {
-                gameController.SendMessage("AddScore", 1);
+                gameController.SendMessage("AddScore", 3);
+            }
+            else
+            {
+                gameController.SendMessage("AddScore", -1);
+            }
+        } else if (Input.GetKeyDown ("d")) {
+			print ("d was pressed");
+            if (collideWithRightCar)
+            {
+                gameController.SendMessage("AddScore", 3);
             }
             else
             {
@@ -112,6 +128,10 @@ public class PlayerController : MonoBehaviour
 	
 	}
 
+    /// <summary>
+    /// Collision checks
+    /// </summary>
+    /// <param name="collider"></param>
     void OnCollisionStay2D(Collision2D collider)
 	{
 		CheckIfGrounded ();
@@ -120,7 +140,6 @@ public class PlayerController : MonoBehaviour
 	void OnCollisionExit2D(Collision2D collider)
 	{
 		Grounded = false;
-        collideWithCat = collideWithCrack = collideWithLeftCar = collideWithRightCar = collideWithTree = false;
     }
 
     private void CheckIfGrounded()
@@ -137,6 +156,18 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
+    /// <summary>
+    /// 
+    /// </summary>
+	public void didFinishRoll() {
+		this.isRolling = false;
+		this.animator.ResetTrigger ("isRolling");
+	}
+
+    /// <summary>
+    /// Message receivers
+    /// </summary>
+    /// <param name="value"></param>
     void SetCollideWithCat(bool value)
     {
         collideWithCat = value;
@@ -161,11 +192,5 @@ public class PlayerController : MonoBehaviour
     {
         collideWithTree = value;
     }
-
-
-	public void didFinishRoll() {
-		this.isRolling = false;
-		this.animator.ResetTrigger ("isRolling");
-	}
 
 }

@@ -6,12 +6,14 @@ public class ScoreController : MonoBehaviour {
 
     public GUIText scoreText;
     public GUIText endScoreText;
+    public GUIText gameOverText;
     public float totalScore;
 
     public ScoreController()
     {
         this.scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<GUIText>();
         this.endScoreText = GameObject.FindGameObjectWithTag("EndScoreText").GetComponent<GUIText>();
+        this.gameOverText = GameObject.FindGameObjectWithTag("GameOverText").GetComponent<GUIText>();
         totalScore = 0;
         this.scoreText.text = "Score: 0";
     }
@@ -29,7 +31,9 @@ public class ScoreController : MonoBehaviour {
 
     internal void ShowEndScore(bool show = false)
     {
-        endScoreText.text = totalScore.ToString();
+        gameOverText.text = "Game Over";
+        gameOverText.enabled= show;
+        endScoreText.text = String.Format("You Scored: {0}",totalScore.ToString());
         endScoreText.enabled = show;
     }
 }
