@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 			}
             if (collideWithCrack)
             {
-                gameController.SendMessage("AddScore", 3);
+                gameController.SendMessage("AddScore", 2);
             }
             else
             {
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 			print ("a was pressed");
             if (collideWithLeftCar)
             {
-                gameController.SendMessage("AddScore", 3);
+                gameController.SendMessage("AddScore", 5);
             }
             else
             {

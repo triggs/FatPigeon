@@ -7,20 +7,18 @@ public class GameController : MonoBehaviour
 {
 
     public float obstacleSpawnRate; //objects spawn after x milliseconds
-    public float obstacleMoveSpeed;
+	public float obstacleMoveSpeed;
 
     public float foregroundMoveSpeed;
-    public float middlegroundMoveSpeed;
-    public float backgroundMoveSpeed;
-
-    public Spawner rightSpawner;
+	public float middlegroundMoveSpeed;
+	public float backgroundMoveSpeed;
+    
+	public Spawner rightSpawner;
     public Spawner leftSpawner;
     public float nextObstacleSpawnTime;
-
-    public float gameTime = 10.0f;
     public bool gameOver = false;
-    public float gameOverTimeout = 5.0f;
-
+    private float gameOverTimeout = 10.0f;
+    public float gameTimer = 30.0f;
     private ScoreController scoreController;
     public float obstaclePositionGround = -3.5f; // Player, Cat Crack
     public float obstaclePositionMiddle = -0.5f; // Car Right
@@ -42,7 +40,7 @@ public class GameController : MonoBehaviour
         Tree,
         Crack
     }
-
+    
     void Start()
     {
         rightSpawner = GameObject.FindGameObjectWithTag("RightSpawner").GetComponent<Spawner>();
@@ -51,10 +49,10 @@ public class GameController : MonoBehaviour
         nextObstacleSpawnTime = 3.0f;
         scoreController = new ScoreController();
         scoreController.ShowScore();
-        obstacleMoveSpeed = 1.0f;
-        foregroundMoveSpeed = 0.2f;
-        middlegroundMoveSpeed = 1.0f;
-        backgroundMoveSpeed = 0.08f;
+		obstacleMoveSpeed = 1.0f;
+		foregroundMoveSpeed = 0.2f;
+		middlegroundMoveSpeed = 1.0f;
+		backgroundMoveSpeed = 0.08f;
     }
 
     /// <summary>
@@ -62,13 +60,8 @@ public class GameController : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (Time.time > gameTime)
+        if (gameOver)
         {
-            if (!gameOver)
-            {
-                EndGame();
-                gameOver = true;
-            }
             //when game over, load again after a time 
             if (Time.time >= gameOverTimeout)
             {
@@ -88,7 +81,17 @@ public class GameController : MonoBehaviour
             //}
             if (Input.GetKeyDown("o"))
             {
+                gameOver = false;
                 EndGame();
+            }
+
+            if (Input.GetKeyDown("r"))
+            {
+                if (!gameOver)
+                {
+                    // Restart game
+                    scoreController.ResetScore();
+                }
             }
 
             //otherwise galeplay !!!
@@ -108,7 +111,7 @@ public class GameController : MonoBehaviour
                     else
                     {
                         //leftSide car 
-                        moveDirection = new Vector3(obstacleMoveSpeed/10, 0.0f);
+                        moveDirection = new Vector3(obstacleMoveSpeed/8, 0.0f);
                         leftSpawner.SpawnObstacle("Car", moveDirection, new Vector3(leftSpawner.transform.position.x, obstaclePositionTop, 0));
                     }
                 }
@@ -122,7 +125,7 @@ public class GameController : MonoBehaviour
                         else
                             spawnTag = GetObstacleToSpawn();
                     }
-                    if (spawnTag == "Tree")
+                        if (spawnTag == "Tree")
                     {
                         rightSpawner.SpawnObstacle(spawnTag, moveDirection, new Vector3(rightSpawner.transform.position.x, obstaclePositionTree, 0));
                     }
@@ -154,7 +157,10 @@ public class GameController : MonoBehaviour
 
     public void AddScore(int value)
     {
-        scoreController.ChangeScore(value);
+        if (!gameOver)
+        {
+            scoreController.ChangeScore(value);
+        }
     }
 
     /// <summary>
@@ -181,8 +187,12 @@ public class GameController : MonoBehaviour
     public void EndGame()
     {
         //game over, display text and set reload timer 
-        gameOverTimeout = Time.time + gameOverTimeout;
-        scoreController.ShowScore(false);
-        scoreController.ShowEndScore(true);
+        if (!gameOver)
+        {
+            gameOver = true;
+            gameOverTimeout = Time.time + gameOverTimeout;
+            scoreController.ShowScore(false);
+            scoreController.ShowEndScore(true);
+        }
     }
 }
