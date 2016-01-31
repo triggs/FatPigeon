@@ -194,11 +194,6 @@ public class GameController : MonoBehaviour
     public void EndGame()
     {
         //game over, display text and set reload timer 
-<<<<<<< HEAD
-//        gameOverTimeout = Time.time + gameOverTimeout;
-//        scoreController.ShowScore(false);
-//        scoreController.ShowEndScore(true);
-=======
         if (!gameOver)
         {
             gameOver = true;
@@ -206,7 +201,6 @@ public class GameController : MonoBehaviour
             scoreController.ShowScore(false);
             scoreController.ShowEndScore(true);
         }
->>>>>>> 07ef6ada96833b5a75cf115d5e83bea48f49798c
     }
 
 	public void ResetGame(){
