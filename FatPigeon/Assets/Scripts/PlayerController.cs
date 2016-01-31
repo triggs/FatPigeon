@@ -83,6 +83,10 @@ public class PlayerController : MonoBehaviour
             {
                 gameController.SendMessage("AddScore", -1);
             }
+			if (!this.isTwerking && !this.isJumping && !this.isRolling) {
+				this.isTwerking = true;
+				this.animator.SetTrigger ("isTwerking");
+			}
         } else if (Input.GetKeyDown ("s")) {
 
 			//we roll if
@@ -164,7 +168,14 @@ public class PlayerController : MonoBehaviour
     /// <param name="collider"></param>
     void OnCollisionStay2D(Collision2D collider)
 	{
-		CheckIfGrounded ();
+		print ("colliding " + collider.gameObject.name);
+		if (collider.gameObject.name == "ground_level")
+		{
+//			Grounded = true;
+//			changeState(STATE_IDLE);
+			CheckIfGrounded ();
+		}
+
 	}
 
 	void OnCollisionExit2D(Collision2D collider)
