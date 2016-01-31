@@ -79,6 +79,13 @@ public class GameController : MonoBehaviour
             //{
             //    scoreController.ChangeScore(-1);
             //}
+
+			// Reset the game if the player hits "space"
+			if (Input.GetKeyDown ("space")) {
+				print (SceneManager.GetActiveScene ().name);
+				SceneManager.LoadScene (0);
+			}
+
             if (Input.GetKeyDown("o"))
             {
                 gameOver = false;
@@ -195,4 +202,11 @@ public class GameController : MonoBehaviour
             scoreController.ShowEndScore(true);
         }
     }
+
+	public void ResetGame(){
+		if (Input.GetKeyDown ("space")) {
+			print (SceneManager.GetActiveScene ().name);
+			SceneManager.LoadScene (0);
+		}
+	}
 }
