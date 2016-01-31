@@ -11,11 +11,11 @@ public class ScoreController : MonoBehaviour {
 
     public ScoreController()
     {
-//        this.scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<GUIText>();
-//        this.endScoreText = GameObject.FindGameObjectWithTag("EndScoreText").GetComponent<GUIText>();
-//        this.gameOverText = GameObject.FindGameObjectWithTag("GameOverText").GetComponent<GUIText>();
+        this.scoreText = GameObject.FindGameObjectWithTag("ScoreText").GetComponent<GUIText>();
+        this.endScoreText = GameObject.FindGameObjectWithTag("EndScoreText").GetComponent<GUIText>();
+        this.gameOverText = GameObject.FindGameObjectWithTag("GameOverText").GetComponent<GUIText>();
         totalScore = 0;
-//        this.scoreText.text = "Score: 0";
+        this.scoreText.text = "Score: 0";
     }
 
     internal void ChangeScore(int changeByThisNumber)
@@ -32,7 +32,7 @@ public class ScoreController : MonoBehaviour {
 
     internal void ShowScore(bool show = true)
     {
-//        scoreText.enabled = show;
+        scoreText.enabled = show;
     }
 
     internal void ShowEndScore(bool show = false)
