@@ -60,6 +60,12 @@ public class PlayerController : MonoBehaviour
             {
                 gameController.SendMessage("AddScore", -1);
             }
+
+			// Play flap sound here
+			//var audioClip = Resources.Load<AudioClip>("Wings Flap");
+			gameController.audioSource.clip = Resources.Load<AudioClip> ("Wings Flap");
+			gameController.audioSource.Play();
+
         } else if (Input.GetKeyDown ("a")) {
 			print ("a was pressed");
             if (collideWithLeftCar)
