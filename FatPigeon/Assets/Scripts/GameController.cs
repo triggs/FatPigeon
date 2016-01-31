@@ -154,7 +154,7 @@ public class GameController : MonoBehaviour
 
     public void AddScore(int value)
     {
-        scoreController.ChangeScore(value);
+//        scoreController.ChangeScore(value);
     }
 
     /// <summary>
@@ -181,8 +181,8 @@ public class GameController : MonoBehaviour
     public void EndGame()
     {
         //game over, display text and set reload timer 
-        gameOverTimeout = Time.time + gameOverTimeout;
-        scoreController.ShowScore(false);
-        scoreController.ShowEndScore(true);
+//        gameOverTimeout = Time.time + gameOverTimeout;
+//        scoreController.ShowScore(false);
+//        scoreController.ShowEndScore(true);
     }
 }

@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 	private Rigidbody2D body;
 	public bool isJumping;
 	public bool isRolling;
+	public bool isTwerking;
+
 	private Animator animator;
 	public GameController gameController;
     // collider flags
@@ -40,6 +42,11 @@ public class PlayerController : MonoBehaviour
 //				transform.Translate (Vector2.up * 2.75f);
 				this.body.AddForce (Vector2.up * 275f);
 				this.isJumping = true;
+				this.isTwerking = false;
+				if (this.isTwerking) {
+					this.isTwerking = false;
+					this.animator.ResetTrigger ("isTwerking");
+				}
 				this.animator.SetTrigger ("isJumping");
 			} else {
 				print ("velocity was " + this.body.velocity.y);
@@ -67,6 +74,10 @@ public class PlayerController : MonoBehaviour
 			//we roll if
 			//not rolling AND not jumping
 			if (this.Grounded && !this.isJumping) {
+				if (this.isTwerking) {
+					this.isTwerking = false;
+					this.animator.ResetTrigger ("isTwerking");
+				}
 				this.animator.SetTrigger ("isRolling");
 			}
             //we stop rolling if
@@ -92,6 +103,11 @@ public class PlayerController : MonoBehaviour
             {
                 gameController.SendMessage("AddScore", -1);
             }
+
+			if (!this.isTwerking && !this.isJumping && !this.isRolling) {
+				this.isTwerking = true;
+				this.animator.SetTrigger ("isTwerking");
+			}
         }
 	}
 
