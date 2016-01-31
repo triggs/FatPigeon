@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
     public float obstaclePositionMiddle = -0.5f; // Car Right
     public float obstaclePositionTop = 1; // Car Left
     public float obstaclePositionTree = 0f; //Tree 
-
+	private DateTime startTime;
 	public AudioSource audioSource; // Audio source for player sound effects
 
     public enum PassFailTime
@@ -54,6 +54,7 @@ public class GameController : MonoBehaviour
 		foregroundMoveSpeed = 0.2f;
 		middlegroundMoveSpeed = 1.0f;
 		backgroundMoveSpeed = 0.08f;
+		this.startTime = DateTime.Now;
     }
 
     /// <summary>
@@ -61,6 +62,14 @@ public class GameController : MonoBehaviour
     /// </summary>
     void Update()
     {
+
+		TimeSpan span = DateTime.Now - startTime;
+		int ms = (int)span.TotalMilliseconds;
+//		print ("time played " + (DateTime.Now - this.startTime));
+		if (ms > 30000) {
+			this.EndGame ();
+		}
+
         if (gameOver)
         {
             //when game over, load again after a time 
