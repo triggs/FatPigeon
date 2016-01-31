@@ -77,14 +77,15 @@ public class GameController : MonoBehaviour
         }
         else {
 
-            if (Input.GetKeyDown("p"))
-            {
-                scoreController.ChangeScore(1);
-            }
-            if (Input.GetKeyDown("l"))
-            {
-                scoreController.ChangeScore(-1);
-            }
+            // We don't need these any more.
+            //if (Input.GetKeyDown("p"))
+            //{
+            //    scoreController.ChangeScore(1);
+            //}
+            //if (Input.GetKeyDown("l"))
+            //{
+            //    scoreController.ChangeScore(-1);
+            //}
             if (Input.GetKeyDown("o"))
             {
                 EndGame();
