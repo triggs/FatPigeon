@@ -20,7 +20,7 @@ public class ScoreController : MonoBehaviour {
 
     internal void ChangeScore(int changeByThisNumber)
     {
-        totalScore += changeByThisNumber;
+        totalScore = Math.Max(totalScore + changeByThisNumber, 0);
         scoreText.text = String.Format("Score: {0}", totalScore);
     }
 
