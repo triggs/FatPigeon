@@ -24,6 +24,12 @@ public class ScoreController : MonoBehaviour {
         scoreText.text = String.Format("Score: {0}", totalScore);
     }
 
+    internal void ResetScore()
+    {
+        totalScore = 0;
+        scoreText.text = String.Format("Score: {0}", totalScore);
+    }
+
     internal void ShowScore(bool show = true)
     {
         scoreText.enabled = show;

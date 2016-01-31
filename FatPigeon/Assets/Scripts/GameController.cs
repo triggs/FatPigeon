@@ -85,6 +85,15 @@ public class GameController : MonoBehaviour
                 EndGame();
             }
 
+            if (Input.GetKeyDown("r"))
+            {
+                if (!gameOver)
+                {
+                    // Restart game
+                    scoreController.ResetScore();
+                }
+            }
+
             //otherwise galeplay !!!
             if (Time.time > nextObstacleSpawnTime)
             {
