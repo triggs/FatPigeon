@@ -4,6 +4,8 @@ using System.Collections;
 public class CrackController : MonoBehaviour {
 
     private Vector3 moveDirection;
+	public float obstacleSpeed = 0.15f;
+
 
     public void SetMoveDirection(Vector3 _moveDirection)
     {
